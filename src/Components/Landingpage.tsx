@@ -29,7 +29,7 @@ export default function Landingpage() {
       sm:text-2xl sm:w-[300px] sm:mx-16 sm:mt-0
       lg:text-3xl lg:w-[350px] lg:mx-28"
             >
-              Nepal’s First Subscription Based Ride Sharing App
+              Nepal’s First Subscription Based Ride Sharing App | Made in Nepal
             </h1>
           </div>
 
