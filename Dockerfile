@@ -1,5 +1,5 @@
 # Importing the base image
-FROM node as Builder
+FROM node as builder
 
 # Setting the working directory
 WORKDIR /usr/src/app
@@ -24,7 +24,7 @@ RUN npm run build
 FROM nginx:alpine
 
 ## Copying the build output from the Builder stage
-COPY --from=Builder /usr/src/app/build /usr/share/nginx/html
+COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
 
 EXPOSE 80
 
