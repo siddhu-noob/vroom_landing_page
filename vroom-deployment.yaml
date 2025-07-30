@@ -6,11 +6,12 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: vroom-website
+      app: vroom-website ## This tells the Deployment which name tags to look for when creating pods.
   template:
     metadata:
       labels:
-        app: vroom-website
+        app: vroom-website 
+        # Labels are just like name tags. When the deployment creates pods, it gives them labels - like name tags.
     spec:
       containers:
       - name: vroom-website-container
