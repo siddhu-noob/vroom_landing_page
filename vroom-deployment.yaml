@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: vroom-website-container
-        image: arcka7/hub-website:test1
+        image: arcka7/hub-vroom-website:test1
         ports:
         - containerPort: 80
