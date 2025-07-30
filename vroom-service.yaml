@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: vroom-website-service
+spec:
+  selector:
+    app: vroom-website # Must match the name tags
+  type: NodePort
+    # Using NodePort for local development, which exposes the service on a port on each node.
+  ports:
+  - port: 80  # Port exposed by the service.
+    targetPort: 80 # Port inside the container/pod.
+    nodePort: 30080
+       
+        
