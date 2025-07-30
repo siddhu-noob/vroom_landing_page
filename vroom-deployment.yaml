@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vroom-website-deployment
+spec:
+  replicas: 2
+  selector:
+    matchlabels:
+      app: vroom-website
+
+  template:
+    metadata:
+      labels:
+        apps: vroom-website
+    spec:
+      containers:
+      - name: vroom-website-container
+        image: arcka7/hub-website:test1
+        ports:
+        - containerPort: 80
