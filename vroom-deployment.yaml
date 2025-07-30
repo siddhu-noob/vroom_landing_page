@@ -7,11 +7,10 @@ spec:
   selector:
     matchlabels:
       app: vroom-website
-
   template:
     metadata:
       labels:
-        apps: vroom-website
+        app: vroom-website
     spec:
       containers:
       - name: vroom-website-container
